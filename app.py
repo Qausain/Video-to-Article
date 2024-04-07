@@ -116,3 +116,4 @@ if submit:
             st.write("-----------------------------------------------------------------------------------")
             st.markdown('<h1 class="response">Here is the Article: </h1>', unsafe_allow_html=True)
             st.write(article)
+

@@ -46,8 +46,12 @@ def extract_transcript(video_url):
 
 
 st.title("Youtube Video to Article")
+video_id = ""
 video_url = st.text_input("Enter the video link: ")
-video_id = video_url.split("=")[1]
+if video_url:
+    video_id = video_url.split("=")[1]
+else:
+    st.info("Enter the video URL...")
 if video_url:
     st.image(f"http://img.youtube.com/vi/{video_id}/0.jpg", use_column_width=True)
 submit = st.button("Generate Article")
